@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1008277131026",
+    "firebase_url": "https://movie-it-4dece-default-rtdb.firebaseio.com",
+    "project_id": "movie-it-4dece",
+    "storage_bucket": "movie-it-4dece.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008277131026:android:84fa2d43f32ab9c2f1adcb",
+        "android_client_info": {
+          "package_name": "com.example.movie_it"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008277131026-a3p1avrqohtruerjnssshi2djflakel4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwhKDjaBQyT0IpcNKgeMfZ-mCCz7HYVNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008277131026-a3p1avrqohtruerjnssshi2djflakel4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
