@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie IT Preview</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .movie { border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .movie img { max-width: 100px; float: left; margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Movie IT Preview</h1>
+    <div id="movies-container"></div>
+
+    <script>
+        const API_KEY = 'f2d2871130f2186d01353e79f53320b9';
+        
+        async function fetchMovies() {
+            try {
+                const response = await fetch(
+                    `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
+                );
+                const data = await response.json();
+                displayMovies(data.results);
+            } catch (error) {
+                console.error('Error fetching movies:', error);
+            }
+        }
+
+        function displayMovies(movies) {
+            const container = document.getElementById('movies-container');
+            movies.forEach(movie => {
+                const movieEl = document.createElement('div');
+                movieEl.className = 'movie';
+                movieEl.innerHTML = `
+                    <h3>${movie.title}</h3>
+                    <p>${movie.overview}</p>
+                    <small>Rating: ${movie.vote_average}/10</small>
+                `;
+                container.appendChild(movieEl);
+            });
+        }
+
+        // Initialize
+        fetchMovies();
+    </script>
+</body>
+</html>
